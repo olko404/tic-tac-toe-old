@@ -1,47 +1,22 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
-<meta charset="UTF-8"> 
-<title>Document</title> 
+	<meta charset="UTF-8"> 
+	<title>Document</title> 
+</head>
+<body>
 
-</head> 
-<body> 
+<label for="row">input row</label>
+<input type="text" id="row">
 
-<label for="name">Enter the name of the best dev</label> 
-<input maxlength="25" size="40" value="" id="name"> 
-<a href="#" id="wanted">wanted</a> 
+<label for="col">input col</label>
+<input type="text" id="col">
 
-<script> 
+<button id="number">Enter</button>
 
-window.onload = function() { 
 
-var wanted = document.getElementById('wanted'); 
-
-function isTheBestDeveloper() { 
-
-var name = document.getElementById('name').value; 
-var namelen = name.length; 
-
-if (namelen === 5) { 
-alert('Good. you are on a right way!'); 
-
-if (name.charAt(0) === 'А' && name.charAt(4) === 'н' || name.charAt(0) === 'A' || name.charAt(4) === 'n' ) 
-alert('Got you!'); 
-} 
-else { 
-alert('Error. You are not a cool Dev'); 
-var p = document.createElement('p'); 
-document.body.appendChild(p); 
-p.innerHTML= 'Name should not contain ' + namelen + ' letter'; 
-return false; 
-} 
-} 
-
-wanted.addEventListener('click', isTheBestDeveloper); 
-
-} 
-
-</script> 
+<script	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src='js/function.js'></script>
 
 </body> 
 </html>
